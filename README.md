@@ -1,33 +1,42 @@
-# :checkered_flag: NOME DO PROJETO
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/IDEzcQ6G)
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=23610829)
+# :checkered_flag: Supremus Service
 
-Breve descrição do que o seu projeto faz.
+Sistema Fullstack para gestão de fluxo e automação operacional de assistências técnicas especializadas.
 
 ## :technologist: Membros da equipe
 
-Matrícula, nome e curso dos participantes.
+Felipe Feitosa Teixeira - Engenharia de Computação.
 
 ## :bulb: Objetivo Geral
-Descrever o objetivo de geral do projeto
+Profissionalizar o fluxo de atendimento de assistências técnicas através de uma solução robusta que automatiza a geração de documentos e monitora o laboratório em tempo real.
 
 ## :eyes: Público-Alvo
-Público-alvo do projeto
+Proprietários, gerentes e técnicos de assistências técnicas e laboratórios de eletrônicos/informática.
 
 ## :star2: Impacto Esperado
-Descreva o impacto esperado do projeto em relação ao público alvo
+Otimização do tempo de reparo, eliminação de falhas de comunicação via dashboard em tempo real e maior credibilidade profissional através de documentos padronizados.
 
 ## :people_holding_hands: Papéis ou tipos de usuário da aplicação
 
-Informe aqui os tipos de usuário que irão interagir com a aplicação. Ex: administrador, locador, locatario, usuário não logado.
+* **Administrador (Dono/Chefe):** Acesso total ao sistema, relatórios financeiros e gestão de permissões.
+* **Gerente:** Controle de equipes e atribuição de prioridades no dashboard.
+* **Técnico:** Preenchimento de diagnósticos, atualização de status e emissão de orçamentos.
+* **Cliente (Não logado):** Consulta pública de status da Ordem de Serviço.
 
 > Tenha em mente que obrigatoriamente a aplicação deve possuir funcionalidades acessíveis a todos os tipos de usuário e outra funcionalidades restritas a certos tipos de usuários.
 
 ## :triangular_flag_on_post:	 Principais funcionalidades da aplicação
 
-Descreva ou liste brevemente as principais funcionalidades da aplicação que será desenvolvida. Destaque a funcionalidades que serão acessíveis a todos os usuários e aquelas restritas a usuários logados.
+* **Acessíveis a todos:** Consulta rápida de status de OS e landing page institucional.
+* **Restritas (Logados):** Check-in de equipamentos com máscaras dinâmicas, Dashboard Laboratorial em tempo real, Geração de PDFs (Recibos e Orçamentos) via pdf-lib e gestão de diagnósticos técnicos.
 
 ## :spiral_calendar: Entidades ou tabelas do sistema
 
-Liste as principais entidades do sistema.
+* Ordem de Serviço (OS)
+* Usuário
+* Cliente
+* Equipe de Trabalho
 
 
 ----
@@ -41,11 +50,11 @@ Liste as principais entidades do sistema.
 
 **Frontend:**
 
-Lista as tecnologias, frameworks e bibliotecas utilizados.
+React.js, Tailwind CSS, Lucide React e pdf-lib.
 
 **Backend:**
 
-Lista as tecnologias, frameworks e bibliotecas utilizados.
+FastAPI (Python), Firebase Firestore (GCP) e Render (Hosting).
 
 
 ## :shipit: Operações implementadas para cada entidade da aplicação
@@ -53,9 +62,9 @@ Lista as tecnologias, frameworks e bibliotecas utilizados.
 
 | Entidade| Criação | Leitura | Atualização | Remoção |
 | --- | --- | --- | --- | --- |
-| Entidade 1 | X |  X  |  | X |
-| Entidade 2 | X |    |  X | X |
-| Entidade 3 | X |    |  |  |
+| Ordem de Serviço (OS) | X |  X  |  X | X |
+| Usuário | X |  X |  X | X |
+| Cliente | X |  X |  X |  |
 
 > Lembre-se que é necessário implementar o CRUD de pelo menos duas entidades.
 
@@ -63,5 +72,7 @@ Lista as tecnologias, frameworks e bibliotecas utilizados.
 
 | Método HTTP | URL |
 | --- | --- |
-| GET | api/entidade1/|
-| POST | api/entidade2 |
+| POST | /registrar-os |
+| GET | /listar-os |
+| PUT | /atualizar-os/{id} |
+| POST | /login |
